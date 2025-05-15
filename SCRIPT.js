@@ -1,3 +1,11 @@
+const expiraEm = new Date("2025-05-21"); // Data de expiração
+const hoje = new Date();
+if (hoje > expiraEm) {
+  alert("SEU ACESSO EXPIROU. SCRIPT BLOQUEADO.");
+} else {
+  alert("FEITO POR @KZCRIA\nSEU LOGIN É DE: 7 DIAS\nNAO REPASSE O SCRIPT PARA NINGUEM ;)");
+  // Coloque o restante do código do script aqui abaixo.
+}
 let loadedPlugins = [];
 
 console.clear();
