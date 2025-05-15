@@ -150,7 +150,7 @@ function setupMain() {
             "radio 1": {
               type: "radio",
               options: {
-                choices: [{ content: "🤍", correct: true }]
+                choices: [{ content: "@Kzcria", correct: true }]
               }
             }
           };
@@ -210,7 +210,7 @@ if (!/^https?:\/\/([a-z0-9-]+\.)?khanacademy\.org/.test(window.location.href)) {
     await hideSplashScreen();
     
     setupMain();
-    sendToast("🤍｜Khan Destroyer iniciado!");
+    sendToast("👀｜FEITO POR @KZCRIA!");
     console.clear();
   })();
 }
