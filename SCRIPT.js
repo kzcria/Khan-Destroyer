@@ -6,23 +6,28 @@ console.clear();
 const noop = () => {};
 console.warn = console.error = window.debug = noop;
 
-const splashScreen = document.createElement('splashScreen');
+// Corrigido para criar uma div válida
+const splashScreen = document.createElement('div');
 
 class EventEmitter {
   constructor() { this.events = {}; }
+
   on(t, e) {
     (Array.isArray(t) ? t : [t]).forEach(t => {
       (this.events[t] = this.events[t] || []).push(e);
     });
   }
+
   off(t, e) {
-    (Array.isArray(t ? t : [t])).forEach(t => {
+    (Array.isArray(t) ? t : [t]).forEach(t => {
       this.events[t] && (this.events[t] = this.events[t].filter(h => h !== e));
     });
   }
+
   emit(t, ...e) {
     this.events[t]?.forEach(h => h(...e));
   }
+
   once(t, e) {
     const s = (...i) => {
       e(...i);
@@ -53,5 +58,5 @@ function sendToast(text, duration = 5000, gravity = 'bottom') {
 }
 
 async function showSplashScreen() {
-  splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;";
-  splashScreen.innerHTML = '<span style="color:white;">FEITO POR</span><span style=
+  splashScreen.style.cssText = `
+    position:
