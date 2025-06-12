@@ -1,3 +1,5 @@
+alert("✅ Feito pelo 7️⃣\n🔐 LOGIN PERMANENTE");
+
 let loadedPlugins = [];
 
 console.clear();
