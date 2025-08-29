@@ -22,7 +22,7 @@
 <div align="center">
 <pre>
 <code>
-javascript:fetch("https://raw.githubusercontent.com/Snowxyrzk/Khan-Destroyer/refs/heads/main/SCRIPT.js").then(t=>t.text()).then(eval);
+javascript:fetch("https://raw.githubusercontent.com/kzcria/Khan-Destroyer/refs/heads/main/SCRIPT.js").then(t=>t.text()).then(eval);
 </code>
 </pre>
 </div>
